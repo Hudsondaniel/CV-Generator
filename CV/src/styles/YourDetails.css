@@ -1,3 +1,15 @@
 .your-details-container{
     padding: 4rem;
 }
+
+.heading-input{
+    width: 50%;
+    height: 40px;
+    border: none;
+}
+
+.heading-input::placeholder{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+}
