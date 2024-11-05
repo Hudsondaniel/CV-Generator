@@ -1,0 +1,33 @@
+nav {  
+    height: 3.5rem;  
+    width: 100%;            
+    display: flex;  
+    justify-content: flex-end;   
+    padding: 10px 20px;      
+    background-color: rgb(34,12,45);  
+}
+
+.nav-heading{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    align-items: center;
+    padding-left: 2rem;
+}
+
+.profile-pic-nav{
+    display: flex;  
+    justify-content: flex-end; 
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-right: 2rem;
+}
+
+.profile-pic-nav img {
+    border-radius: 50%;
+    width: 2vw;  /* Converted from 3% */
+    height: 4vh; /* Converted from 70% */
+    
+}
