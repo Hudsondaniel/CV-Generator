@@ -15,7 +15,7 @@ nav {
     align-items: center;
     padding-left: 2rem;
     color: rgb(254,200,142);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
 }
 
@@ -60,21 +60,17 @@ nav {
     }
 }
 
-/* Medium devices (tablets) */
-@media (min-width: 577px) and (max-width: 992px) {
-    /* Styles for tablets and larger mobile devices */
-    
-    .navbar{
+/* Medium devices (standard tablets and larger mobile devices) */
+@media (min-width: 577px) and (max-width: 1199px) {
+    .navbar {
         display: flex;
         align-items: center;
         justify-content: flex-start;
     }
     
-    .profile-pic-nav{
+    .profile-pic-nav {
         display: none;
     }
-
-    
 }
 
 

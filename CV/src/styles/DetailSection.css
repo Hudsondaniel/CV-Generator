@@ -1,0 +1,48 @@
+.buttons-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+}
+
+.your-details, .short-bio, .experience,
+.education, .skills{
+    margin-right: 0.5rem
+}
+
+/*Even padding for all the buttons and look in correct shape*/
+
+.your-details{
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.short-bio{
+    padding-right: 1.7rem;
+    padding-top: 0.5rem;
+    padding-left: 1.7rem;
+    padding-bottom: 0.5rem;
+}
+
+.experience{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.education{
+    padding-right: 1.4rem;
+    padding-left: 1.4rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.skills{
+    padding-right: 2.3rem;
+    padding-left: 2.3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
