@@ -19,3 +19,32 @@ body {
   width: 100%;           
   height: auto;          
 }
+
+@media (max-width: 576px) {
+
+  *{
+    box-sizing: border-box;
+  }
+
+  body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    display: flex; 
+    flex-direction: column; 
+  }
+
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 577px) and (max-width: 992px) {
+  /* Styles for tablets and larger mobile devices */
+}
+
+/* Large devices (desktops) */
+@media (min-width: 993px) {
+  /* Styles for desktops and larger screens */
+}
