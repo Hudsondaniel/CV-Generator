@@ -1,0 +1,9 @@
+.main-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.right-section{
+    
+    background-color: rgb(235,235,235);
+}
