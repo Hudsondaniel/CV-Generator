@@ -1,4 +1,5 @@
 import NavBar from './components/NavBar';
+import DetailSection from './components/DetailSection';
 import YourDetails from './components/YourDetails';
 import ShortBio from './components/ShortBio';
 import Experience from './components/Experience';
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       < NavBar/>
+      < DetailSection/>
       < YourDetails/>
       < ShortBio/>
       < Experience/>
