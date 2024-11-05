@@ -1,6 +1,12 @@
 .main-section{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 7rem;
+}
+
+.nav-section{
+    width: 100%;
+    position: fixed
 }
 
 .right-section{

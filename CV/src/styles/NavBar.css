@@ -4,7 +4,8 @@ nav {
     display: flex;  
     justify-content: flex-end;   
     padding: 10px 20px;      
-    background-color: rgb(34,12,45);  
+    background-color: rgb(34,12,45); 
+    
 }
 
 .nav-heading{

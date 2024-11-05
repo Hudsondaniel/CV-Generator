@@ -14,8 +14,10 @@ function App() {
 
   return (
     <>
-      < NavBar/>
-      < DetailSection/>
+      <div className="nav-section">
+        < NavBar/>
+        < DetailSection/>
+      </div>
       <div className="main-section">
         <div className="left-section">
           < YourDetails/>
