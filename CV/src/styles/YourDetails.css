@@ -1,3 +1,11 @@
+.outer-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .your-details-container{
     padding: 4rem;
 }
@@ -26,7 +34,7 @@
     border: rgb(145, 144, 144) solid 1px;
     overflow: hidden;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .job-title{
@@ -42,6 +50,37 @@
 .input-styling{
     height: 2.5rem;
     margin-top: 0.5rem;
+    margin-bottom: 1.4rem;
     border-radius: 20px;
     border: rgb(145, 144, 144) solid 1px;
+    padding-left: 20px;
+    font-family: 'poppins', sans-serif;
+}
+
+.personal-details-one{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.first-name, .second-name, .email, .phone{
+    display: flex;
+    flex-direction: column;
+}
+
+.first-name, .email{
+    margin-right: 2rem;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons-back-next{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 6rem;
 }
