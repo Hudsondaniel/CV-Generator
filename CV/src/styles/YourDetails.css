@@ -77,6 +77,29 @@
     flex-direction: column;
 }
 
+.back-button{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 3.8rem;
+    padding-left: 3.8rem;
+    border-radius: 30px;
+    background-color: white;
+    border: 1px rgb(146, 146, 146) solid;
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.saveNext-button{
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+    background-color: #f9a966;
+    border: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 30px;
+}
+
 .buttons-back-next{
     display: flex;
     justify-content: space-between;
