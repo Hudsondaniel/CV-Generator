@@ -23,7 +23,7 @@ export default function DetailSection({ setActiveSection }){
     )
 }
 
-DetailSection.prototype ={
+DetailSection.propTypes ={
     setActiveSection: PropTypes.func.isRequired,
 }
 
