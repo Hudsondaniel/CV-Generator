@@ -12,17 +12,23 @@ export default function ShortBio() {
 
     return (
         <div className="short-bio-section">
-            <div className="heading">
-                <h2>Professional Summary</h2>
-                <p>Now, let&rsquo;s add a summary</p>
+            <div className="first-section">
+                <div className="heading">
+                    <h2>Professional Summary</h2>
+                    <p>Now, let&rsquo;s add a summary</p>
+                </div>
+                <div className="text-editor">
+                    <ReactQuill
+                        value={text}
+                        onChange={handleTextChange}
+                        placeholder="Write your summary here..."
+                        theme="snow" // The 'snow' theme adds a toolbar similar to the image you provided
+                    />
+                </div>
             </div>
-            <div className="text-editor">
-                <ReactQuill
-                    value={text}
-                    onChange={handleTextChange}
-                    placeholder="Write your summary here..."
-                    theme="snow" // The 'snow' theme adds a toolbar similar to the image you provided
-                />
+            <div className="buttons-back-next">
+                <button className='back-button'>Back</button>
+                <button className="saveNext-button">Save & Next</button>
             </div>
         </div>
     );

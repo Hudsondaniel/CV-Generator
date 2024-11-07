@@ -1,10 +1,13 @@
 .short-bio-section{
     padding: 4rem;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.text-editor .ql-container {
-                    /* Padding inside the editor */
-}
+
 
 
 /* React Quill styling */
