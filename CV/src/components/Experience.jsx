@@ -31,13 +31,18 @@ export default function Experience() {
                 <div className="experience-box">
                     {experienceEntries.map((entry) => (
                         <form key={entry.id} className="experience-entry">
-                            <input 
-                                type="text" 
-                                value={entry.designationValue} 
-                                onChange={(e) => handleExperienceChange(entry.id, 'designationValue', e.target.value)} 
-                                placeholder="Enter Your Designation" 
-                                className='designation-input'
-                            />
+                            <div className="experience-deleteIcon">
+                                <input 
+                                    type="text" 
+                                    value={entry.designationValue} 
+                                    onChange={(e) => handleExperienceChange(entry.id, 'designationValue', e.target.value)} 
+                                    placeholder="Enter Your Designation" 
+                                    className='designation-input'
+                                />
+                                <div className="delete-icon">
+                                    <img src="../assets/Icons/trashIcon.png" alt="" />
+                                </div>
+                            </div>
                             <div className="address-date">
                                 <input 
                                     type="text" 

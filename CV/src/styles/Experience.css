@@ -55,8 +55,21 @@
     margin-bottom: 2rem;
 }
 
+.experience-deleteIcon{
+    display: flex;
+}
+
+.delete-icon{
+    height: 100%;
+}
+
+.delete-icon img{
+    height: 100%;
+    width: 2rem;
+}
+
 .designation-input{
-    width: 100%;
+    width: 80%;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
     border-radius: 5px;
@@ -126,7 +139,9 @@
     border: 1px solid rgba(145, 145, 145, 0.39);
     background-color: rgba(223, 223, 223, 0.144);
     padding-left: 1.2rem;
+    padding-right: 1.2rem;
     padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 
