@@ -26,7 +26,7 @@ export default function ShortBio() {
                     />
                 </div>
             </div>
-            <div className="buttons-back-next">
+            <div className="buttons-back-next-short-bio">
                 <button className='back-button'>Back</button>
                 <button className="saveNext-button">Save & Next</button>
             </div>

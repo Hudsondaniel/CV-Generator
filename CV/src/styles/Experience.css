@@ -1,0 +1,21 @@
+.experience-section{
+    height: 100%;
+    padding: 4rem;
+}
+
+.experience-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.add-experience{
+    display: flex;
+}
+
+.add
+
+.add-exp-button{
+    font-weight: 400;
+    font-size: 0.9rem;
+}

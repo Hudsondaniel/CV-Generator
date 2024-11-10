@@ -7,6 +7,13 @@
     justify-content: space-between;
 }
 
+.buttons-back-next-short-bio{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 6rem;
+}
 
 
 
