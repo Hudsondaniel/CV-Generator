@@ -2,10 +2,8 @@ import { useState } from 'react';
 import '../styles/Experience.css';
 
 export default function Experience() {
-    // State to control visibility of the experience form
     const [experienceEntries, setExperienceEntries] = useState([]);
 
-    // Toggle form visibility when the button is clicked
     const handleAddExperience = () => {
         setExperienceEntries([...experienceEntries, 
             {
@@ -40,8 +38,7 @@ export default function Experience() {
                                 placeholder="Enter Your Designation" 
                                 className='designation-input'
                             />
-
-                            <div className="all-address-input">
+                            <div className="address-date">
                                 <input 
                                     type="text" 
                                     value={entry.addressValue} 
@@ -49,21 +46,22 @@ export default function Experience() {
                                     placeholder="Enter Company Address" 
                                     className='address-input'
                                 />
-                                <p className="hypen"> - </p>
-                                <input
-                                    type="date"
-                                    value={entry.startDate}
-                                    onChange={(e) => handleExperienceChange(entry.id, 'startDate', e.target.value)}
-                                    className='start-date'
-                                />
-                                <input
-                                    type="date"
-                                    value={entry.endDate}
-                                    onChange={(e) => handleExperienceChange(entry.id, 'endDate', e.target.value)}
-                                    className='end-date'
-                                />
+                                <div className="date">
+                                    <input
+                                        type="date"
+                                        value={entry.startDate}
+                                        onChange={(e) => handleExperienceChange(entry.id, 'startDate', e.target.value)}
+                                        placeholder='Start Date'
+                                        className='start-date'
+                                    />
+                                    <input
+                                        type="date"
+                                        value={entry.endDate}
+                                        onChange={(e) => handleExperienceChange(entry.id, 'endDate', e.target.value)}
+                                        className='end-date'
+                                    />
+                                </div>
                             </div>
-                            
                             <textarea
                                 value={entry.shortDescription} 
                                 onChange={(e) => handleExperienceChange(entry.id, 'shortDescription', e.target.value)} 
@@ -71,8 +69,10 @@ export default function Experience() {
                                 className='short-description'
                             />
                         </form>
+                        
                     ))}
                 </div>
+                
                 <div className="add-experience">
                     <button onClick={handleAddExperience} className="add-experience-button">
                         + 
