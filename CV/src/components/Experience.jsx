@@ -7,13 +7,20 @@ export default function Experience() {
 
     // Toggle form visibility when the button is clicked
     const handleAddExperience = () => {
-        setExperienceEntries([...experienceEntries, {id: experienceEntries.length + 1, value: ""}]);
+        setExperienceEntries([...experienceEntries, 
+            {
+                id: experienceEntries.length + 1, 
+                designationValue: "", 
+                addressValue: "",  
+                experienceDuration: "", 
+                shortDescription: ""
+            }]);
     };
 
-    const handleExperienceChange = (id, newValue) => {
+    const handleExperienceChange = (id, field, newValue) => {
         setExperienceEntries(
             experienceEntries.map(entry =>
-                entry.id === id? {...entry, value: newValue} : entry
+                entry.id === id ? {...entry, [field]: newValue} : entry
             )
         )
     }
@@ -21,18 +28,49 @@ export default function Experience() {
     return (
         <div className="experience-container">
             <div className="experience-section">
-                <h2>Experience</h2>
-                <p>Review your experience history</p>
+                <h2 className='experience-heading'>Experience</h2>
+                <p className='experience-text'>Review your experience history</p>
                 <div className="experience-box">
                     {experienceEntries.map((entry) => (
-                            <form key={entry.id} className="experience-entry">
+                        <form key={entry.id} className="experience-entry">
+                            <input 
+                                type="text" 
+                                value={entry.designationValue} 
+                                onChange={(e) => handleExperienceChange(entry.id, 'designationValue', e.target.value)} 
+                                placeholder="Enter Your Designation" 
+                                className='designation-input'
+                            />
+
+                            <div className="all-address-input">
                                 <input 
                                     type="text" 
-                                    value={entry.value} 
-                                    onChange={(e) => handleExperienceChange(entry.id, e.target.value)} 
-                                    placeholder="Enter experience details" 
+                                    value={entry.addressValue} 
+                                    onChange={(e) => handleExperienceChange(entry.id, 'addressValue', e.target.value)} 
+                                    placeholder="Enter Company Address" 
+                                    className='address-input'
                                 />
-                            </form>
+                                <p className="hypen"> - </p>
+                                <input
+                                    type="date"
+                                    value={entry.startDate}
+                                    onChange={(e) => handleExperienceChange(entry.id, 'startDate', e.target.value)}
+                                    className='start-date'
+                                />
+                                <input
+                                    type="date"
+                                    value={entry.endDate}
+                                    onChange={(e) => handleExperienceChange(entry.id, 'endDate', e.target.value)}
+                                    className='end-date'
+                                />
+                            </div>
+                            
+                            <textarea
+                                value={entry.shortDescription} 
+                                onChange={(e) => handleExperienceChange(entry.id, 'shortDescription', e.target.value)} 
+                                placeholder="Short Description of Your Role"
+                                className='short-description'
+                            />
+                        </form>
                     ))}
                 </div>
                 <div className="add-experience">
