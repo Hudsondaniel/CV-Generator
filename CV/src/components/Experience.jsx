@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../styles/Experience.css';
+import trashIcon from '../assets/Icons/trashIco.svg';
 
 export default function Experience() {
     const [experienceEntries, setExperienceEntries] = useState([]);
@@ -40,7 +41,7 @@ export default function Experience() {
                                     className='designation-input'
                                 />
                                 <div className="delete-icon">
-                                    <img src="../assets/Icons/trashIcon.png" alt="" />
+                                    <img src={trashIcon} alt="" />
                                 </div>
                             </div>
                             <div className="address-date">

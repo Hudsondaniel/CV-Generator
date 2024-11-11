@@ -56,16 +56,25 @@
 }
 
 .experience-deleteIcon{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 45px;
 }
 
 .delete-icon{
-    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8fb;
+    border: 1px solid rgba(128, 128, 128, 0.548);
+    border-radius: 50%;
+    margin: 0.5rem;
 }
 
 .delete-icon img{
     height: 100%;
-    width: 2rem;
+    width: 100%;
+    width: 1.1rem;
+
 }
 
 .designation-input{
