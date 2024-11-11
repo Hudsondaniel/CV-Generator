@@ -21,10 +21,13 @@
     font-weight: bold;
     color: black;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .form-text{
     margin-top: 0.5rem;
+    color: rgb(134, 134, 134);
+    margin-bottom: 2.2rem;
 }
 
 .resume-dp{

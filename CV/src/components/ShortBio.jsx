@@ -14,8 +14,8 @@ export default function ShortBio() {
         <div className="short-bio-section">
             <div className="first-section">
                 <div className="heading">
-                    <h2>Professional Summary</h2>
-                    <p>Now, let&rsquo;s add a summary</p>
+                    <h2 className='shortbio-heading'>Professional Summary</h2>
+                    <p className='shortBio-text'>Now, let&rsquo;s add a summary</p>
                 </div>
                 <div className="text-editor">
                     <ReactQuill

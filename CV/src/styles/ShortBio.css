@@ -1,10 +1,21 @@
 .short-bio-section{
     padding: 4rem;
     height: 100%;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.shortbio-heading{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.6rem;
+}
+
+.shortBio-text{
+  color: rgb(134, 134, 134);
+  margin-top:0.5rem;
+  margin-bottom: 2.2rem;
 }
 
 .buttons-back-next-short-bio{
@@ -26,7 +37,7 @@
  * Copyright (c) 2013, salesforce.com
  */
 
- .ql-container {
+.ql-container {
     box-sizing: border-box;
     font-family: 'poppins', sans-serif; 
     font-size: 0.9rem;                  /* Set font size */
