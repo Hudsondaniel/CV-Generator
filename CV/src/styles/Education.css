@@ -2,6 +2,10 @@
     padding: 4rem 4rem 2rem 4rem;
 }
 
+.education-box{
+    margin-bottom: 1.5rem;
+}
+
 .education-heading{
     font-size: 1.6rem;
     margin-bottom: 0;
@@ -20,4 +24,105 @@
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.education-delete{
+    display: grid;
+    grid-template-columns: 1fr 45px;
+    align-items: center;
+    justify-content: center;
+}
+
+.institution-input{
+    color: black;
+    width: 80%;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.degree-input:focus, .institution-input:focus{
+    border: none; 
+    box-shadow: none; 
+    outline: none; 
+}
+
+.degree-input{
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.degree-input::placeholder{
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.degree-date{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.institution-input::placeholder{
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+.date-education{
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.start-date-input, .end-date-input{
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.end-date-input{
+    margin-left: 3rem;
+}
+
+.delete-icon-education{
+    display: flex;
+    width:70%;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8fb;
+    border: 1px solid rgba(128, 128, 128, 0.548);
+    border-radius: 50%;
+}
+
+.delete-icon-education img{
+    height: 100%;
+    width: 100%;
+    width: 1.1rem;
+
+}
+
+.add-education-button{
+    background-color: black;
+    color: white;
+    font-size: 1.7rem;
+    margin-right: 0.8rem;
+    border-radius: 50%;
+    padding: 0.2rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.add-education{
+    display: flex;
+    align-items: center;
 }
