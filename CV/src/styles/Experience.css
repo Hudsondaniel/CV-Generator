@@ -6,7 +6,6 @@
 .experience-container{
     display: flex;
     height: 100%;
-
     flex-direction: column;
     justify-content: space-between;
 }
@@ -27,7 +26,6 @@
     display: flex;
     align-items: center;
 }
-
 
 .add-exp-button{
     font-weight: 600;

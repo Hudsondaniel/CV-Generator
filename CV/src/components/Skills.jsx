@@ -27,24 +27,31 @@ export default function Skills() {
 
     return (
         <div className="skills-container">
-            <h2 className="skills-heading">Skills</h2>
-            <div className="skills-input-container">
-                <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleInputChange}
-                    onKeyDown={handleInputKeyDown}
-                    placeholder="Type a skill and press Enter"
-                    className="skills-input"
-                />
-            </div>
-            <div className="skills-tags-container">
-                {skills.map((skill) => (
-                    <div key={skill.id} className="skill-tag">
-                        {skill.text}
-                        <button className="remove-skill" onClick={() => removeSkill(skill.id)}>✕</button>
-                    </div>
-                ))}
+            <div className="skills-inner-container">
+                <h2 className="skills-heading">Skills</h2>
+                <p className="skills-text">Highlight Your Top Skills</p>
+                <div className="skills-input-container">
+                    <input
+                        type="text"
+                        value={inputValue}
+                        onChange={handleInputChange}
+                        onKeyDown={handleInputKeyDown}
+                        placeholder="Type a skill and press Enter"
+                        className="skills-input"
+                    />
+                </div>
+                <div className="skills-tags-container">
+                    {skills.map((skill) => (
+                        <div key={skill.id} className="skill-tag">
+                            {skill.text}
+                            <button className="remove-skill" onClick={() => removeSkill(skill.id)}>✕</button>
+                        </div>
+                    ))}
+                </div>
+                </div>
+            <div className="buttons-back-next-short-bio">
+                <button className="back-button">Back</button>
+                <button className="saveNext-button">Save & Next</button>
             </div>
         </div>
     );
