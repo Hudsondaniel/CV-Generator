@@ -43,8 +43,7 @@ export default function Skills() {
                 <div className="skills-tags-container">
                     {skills.map((skill) => (
                         <div key={skill.id} className="skill-tag">
-                            {skill.text}
-                            <button className="remove-skill" onClick={() => removeSkill(skill.id)}>✕</button>
+                            <div className="skill-text">{skill.text} <button className="remove-skill" onClick={() => removeSkill(skill.id)}>✕</button></div>                            
                         </div>
                     ))}
                 </div>

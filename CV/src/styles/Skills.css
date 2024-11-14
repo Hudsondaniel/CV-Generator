@@ -23,3 +23,45 @@
     margin-top: 0.5rem;
     margin-bottom: 2.2rem;
 }
+
+.skills-input{
+    font-family: 'Poppins', sans-serif;  
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 1rem;
+    border: 2px rgba(100, 100, 100, 0.39) solid;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);  
+}
+
+.skills-input:focus {
+    outline: none;  
+}
+
+.skills-tags-container{
+    display: flex; 
+    flex-wrap: wrap;  
+    gap: 10px;  
+    margin-top: 2rem;  
+}
+
+.skill-tag{
+    display: flex;  
+    align-items: center;  
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.remove-skill {
+    background: none;
+    border: none;
+    color: rgb(255, 115, 0);
+    font-size: 16px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.skill-text{
+    margin-left: 10px;
+}
