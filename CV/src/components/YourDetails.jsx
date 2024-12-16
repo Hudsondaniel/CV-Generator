@@ -1,6 +1,21 @@
+import { useState } from 'react'
 import '../styles/YourDetails.css'
 
 export default function YourDetails(){
+    const [image, setImage] = useState("");
+
+    const handleFileChange = (e) => { 
+        const file = e.target.files[0];
+        if (file){
+            const reader = new FileReader(null);
+            reader.onload = (e) => {
+                setImage(e.target.result);
+            }
+            reader.readAsDataURL(file);
+        }
+    }
+
+
     return (
         <div className="outer-container">
             <div className="your-details-container">
@@ -8,8 +23,15 @@ export default function YourDetails(){
                     <h3 className='Title-your-details'>Your Journey Begins Here!</h3>
                     <p className='form-text'>How do you want employers to contact you?</p>
                     <div className="resume-dp">
-                        <img src="" alt="" />
+                        <image className="image-container">
+                            <img src={image} alt="" className='image-resume'/>
+                        </image>
                     </div>
+                    <input 
+                        type="file"
+                        accept='image/*'
+                        onChange={handleFileChange}    
+                    />
                 </div>
                 <form action="">
                     <div className="job-title">

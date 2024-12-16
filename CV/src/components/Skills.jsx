@@ -10,17 +10,15 @@ export default function Skills() {
         setInputValue(e.target.value);
     };
 
-    // Add skill to the list when pressing Enter
     const handleInputKeyDown = (e) => {
         if (e.key === 'Enter' && inputValue.trim()) {
             e.preventDefault();
             const newSkill = { id: skills.length + 1, text: inputValue.trim() }; // Generate ID based on length
             setSkills([...skills, newSkill]);
-            setInputValue(''); // Clear input after adding
+            setInputValue(''); 
         }
     };
 
-    // Remove a skill by its unique ID
     const removeSkill = (id) => {
         setSkills(skills.filter(skill => skill.id !== id));
     };
