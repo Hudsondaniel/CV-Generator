@@ -33,6 +33,7 @@
 .resume-dp{
     width: 150px;
     position: relative;
+    z-index: -1;
     height: 150px;
     border-radius: 50%;
     border: rgb(145, 144, 144) solid 1px;
