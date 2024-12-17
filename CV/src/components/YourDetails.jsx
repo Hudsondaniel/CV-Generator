@@ -1,14 +1,10 @@
-import { useState } from 'react';
+import useDetailsStore from '../stores/useDetailsStore';
 import '../styles/YourDetails.css';
 
 export default function YourDetails() {
-    const [image, setImage] = useState("");
-    const [jobTitle, setJobTitle] = useState("");
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phoneNumber, setPhoneNumber] = useState("");
-    const [address, setAddress] = useState("");
+    const { image, jobTitle, firstName, lastName, email, phoneNumber, address, 
+        setImage, setJobTitle, setFirstName, setLastName, setEmail, setPhoneNumber, setAddress} = useDetailsStore();
+
 
     // Handle file upload and preview
     const handleFileChange = (e) => { 
@@ -29,20 +25,6 @@ export default function YourDetails() {
     const handlePhoneNumberChange = (e) => setPhoneNumber(e.target.value);
     const handleAddressChange = (e) => setAddress(e.target.value);
 
-    // Save form data (you can implement logic to store or send this data)
-    const handleSaveNext = () => {
-        const formData = {
-            jobTitle,
-            firstName,
-            lastName,
-            email,
-            phoneNumber,
-            address,
-            image,
-        };
-        console.log("Form Data:", formData);
-        alert("Form saved successfully!");
-    };
 
     return (
         <div className="outer-container">
@@ -145,7 +127,6 @@ export default function YourDetails() {
                 <button 
                     type="button" 
                     className="saveNext-button" 
-                    onClick={handleSaveNext}
                 >
                     Save & Next
                 </button>
