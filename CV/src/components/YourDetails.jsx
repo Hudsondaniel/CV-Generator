@@ -23,15 +23,22 @@ export default function YourDetails(){
                     <h3 className='Title-your-details'>Your Journey Begins Here!</h3>
                     <p className='form-text'>How do you want employers to contact you?</p>
                     <div className="resume-dp">
-                        <image className="image-container">
+                        <div className="image-container">
                             <img src={image} alt="" className='image-resume'/>
-                        </image>
+                        </div>
                     </div>
-                    <input 
-                        type="file"
-                        accept='image/*'
-                        onChange={handleFileChange}    
-                    />
+                    <div className="file-input-container">
+                        <input 
+                            type="file"
+                            accept="image/*"
+                            id="file-upload"
+                            onChange={handleFileChange}
+                        />
+                        <label htmlFor="file-upload" className="custom-file-upload">
+                            +
+                        </label>
+                    </div>
+
                 </div>
                 <form action="">
                     <div className="job-title">

@@ -32,18 +32,18 @@
 
 .resume-dp{
     width: 150px;
+    position: relative;
     height: 150px;
     border-radius: 50%;
     border: rgb(145, 144, 144) solid 1px;
     overflow: hidden;
     margin-top: 2rem;
-    margin-bottom: 2.5rem;
 }
 
 .image-container{
+    position: relative;
     height: 100%;
     width: 100%;
-    
 }
 
 .image-resume{
@@ -52,9 +52,41 @@
     object-fit:cover;
 }
 
+.file-input-container {
+    position: absolute;
+    transform: translate(100px, -40px);
+    display: inline-block;
+    padding-bottom: 2rem;
+}
+
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+.custom-file-upload {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(34,12,45); /* Green background */
+    color: rgb(241, 241, 241);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%; /* Circle shape */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #534bbb; /* Darker green on hover */
+}
+
+
 .job-title{
     display: flex;
     flex-direction: column;
+    margin-top: 2.5rem;
 }
 
 .label-styling{
