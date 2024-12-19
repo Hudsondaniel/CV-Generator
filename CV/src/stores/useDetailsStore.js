@@ -1,5 +1,5 @@
 // useDetailsStore.js
-import create from 'zustand';
+import { create } from 'zustand';
 
 const useDetailsStore = create((set) => ({
     image: '',
