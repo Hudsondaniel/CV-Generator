@@ -1,6 +1,6 @@
 .resume-page{
     display: grid;
-    grid-template-rows: 15% 280.75px 449.2px 224.6px;
+    grid-template-rows: 15% 1fr 2fr 1fr;
     height: 1123px;
     background-color: white;
     margin: 3rem;
@@ -19,12 +19,30 @@
 .resume-page-dp{
     display: flex;
     align-items: center;
-
 }
+
 .resume-page-dp img{
     height: 70%;
-    width: 40%;
+    width: 8rem;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.resume-page-address{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 
 }
+
+.resume-page-address .resume-page-inner-details{
+    margin-left: auto;
+}
+
+.resume-inner-text {
+    padding: 0;
+    margin: 0;
+    color: black; 
+    font-size: 0.8rem;
+}
+
