@@ -1,4 +1,6 @@
 .resume-page{
+    display: grid;
+    grid-template-rows: 15% 280.75px 449.2px 224.6px;
     height: 1123px;
     background-color: white;
     margin: 3rem;
@@ -6,4 +8,23 @@
     background-size: cover;
     background-position: no-repeat;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+}
+
+.dp-address{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.resume-page-dp{
+    display: flex;
+    align-items: center;
+
+}
+.resume-page-dp img{
+    height: 70%;
+    width: 40%;
+    object-fit: cover;
+    border-radius: 50%;
+
 }

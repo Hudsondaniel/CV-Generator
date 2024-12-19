@@ -8,11 +8,23 @@ export default function ResumePage(){
     
     return(
         <div className="resume-page">
+            <div className="dp-address">
+                <div className="resume-page-dp">
+                    <img src={image} alt="" />
+                </div>
+                <div className="resume-page-address">
 
-                <h1>{firstName} {lastName}</h1>
-                <h2>{jobTitle}</h2>
+                </div>
+            </div>
+            <div className="resume-page-about">
+                <h2>Hello</h2>
+            </div>
+            <div className="resume-page-experience">
 
-        
+            </div>
+            <div className="resume-page-education-skills">
+
+            </div>
         </div>
     )
 }
