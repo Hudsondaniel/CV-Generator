@@ -2,8 +2,12 @@ import '../styles/ResumePage.css'
 import useDetailsStore from '../stores/useDetailsStore'
 
 export default function ResumePage(){
-    const { image, jobTitle, firstName, lastName, email, phoneNumber, address} = useDetailsStore();
-
+    const { image, jobTitle, firstName, lastName, email, phoneNumber, address, shortBio} = useDetailsStore();
+    const stripHtmlTags = (html) => {
+        const div = document.createElement('div');
+        div.innerHTML = html;
+        return div.textContent || div.innerText || '';
+    };
     
     return(
         <div className="resume-page">
@@ -30,7 +34,7 @@ export default function ResumePage(){
                         <h3 className='job-title'>{jobTitle}</h3>
                     </div>
                     <div className="about-description">
-
+                        <p className='about-description-text'>{stripHtmlTags(shortBio)}</p>
                     </div>
                 </div>
 
