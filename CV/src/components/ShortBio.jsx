@@ -6,9 +6,8 @@ import useDetailsStore from '../stores/useDetailsStore';
 export default function ShortBio() {
     const { shortBio, setShortBio } = useDetailsStore();
 
-    // Function to handle text changes
     const handleTextChange = (value) => {
-        setShortBio(value); // Save raw HTML content to Zustand store
+        setShortBio(value); 
     };
 
     return (
@@ -20,7 +19,7 @@ export default function ShortBio() {
                 </div>
                 <div className="text-editor">
                     <ReactQuill
-                        value={shortBio} // Controlled by Zustand store
+                        value={shortBio} 
                         onChange={handleTextChange}
                         placeholder="Write your summary here..."
                         theme="snow"

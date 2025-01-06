@@ -40,7 +40,9 @@ export default function ResumePage(){
             </div>
             
             <div className="resume-page-experience">
-                
+                <div className="resume-page-about-word">
+                    <h1 className='About'>WORK EXPERIENCE</h1>
+                </div>
             </div>
             <div className="resume-page-education-skills">
 
