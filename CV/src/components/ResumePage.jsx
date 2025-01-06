@@ -19,9 +19,23 @@ export default function ResumePage(){
                     </div>
                 </div>
             </div>
+
             <div className="resume-page-about">
-                <h2>Hello</h2>
+                <div className="resume-page-about-word">
+                    <h1 className='About'>ABOUT</h1>
+                </div>
+                <div className="about-details-container">
+                    <div className="about-details">
+                        <h2 className='name'>{firstName} {lastName}</h2>
+                        <h3 className='job-title'>{jobTitle}</h3>
+                    </div>
+                    <div className="about-description">
+                        
+                    </div>
+                </div>
+
             </div>
+            
             <div className="resume-page-experience">
 
             </div>
