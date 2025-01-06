@@ -9,6 +9,7 @@ const useDetailsStore = create((set) => ({
     email: '',
     phoneNumber: '',
     address: '',
+    shortBio: '',
 
     // Setters for each field
     setImage: (image) => set({ image }),
@@ -18,6 +19,7 @@ const useDetailsStore = create((set) => ({
     setEmail: (email) => set({ email }),
     setPhoneNumber: (phoneNumber) => set({ phoneNumber }),
     setAddress: (address) => set({ address }),
+    setShortBio: (shortbio) => set({ shortbio }),
 
     // Optionally, you can add a function to save form data (just like you had `handleSaveNext`)
     saveFormData: () => {

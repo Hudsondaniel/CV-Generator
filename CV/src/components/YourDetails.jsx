@@ -12,7 +12,7 @@ export default function YourDetails() {
         if (file) {
             const reader = new FileReader();
             reader.onload = (e) => {
-                setImage(e.target.result); // Set image preview
+                setImage(e.target.result); 
             };
             reader.readAsDataURL(file);
         }

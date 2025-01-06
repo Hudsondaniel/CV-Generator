@@ -1,13 +1,13 @@
 import '../styles/ShortBio.css'
-import { useState } from 'react';
 import ReactQuill from 'react-quill'
+import { useDetailsStore } from '../stores/useDetailsStore';
 
 export default function ShortBio() {
-    const [text, setText] = useState('');
+    const {shortBio, setShortBio} = useDetailsStore();
 
     // This function handles the text changes
     const handleTextChange = (value) => {
-        setText(value);
+        setShortBio(value);
     };
 
     return (
@@ -19,7 +19,7 @@ export default function ShortBio() {
                 </div>
                 <div className="text-editor">
                     <ReactQuill
-                        value={text}
+                        value={shortBio}
                         onChange={handleTextChange}
                         placeholder="Write your summary here..."
                         theme="snow" // The 'snow' theme adds a toolbar similar to the image you provided

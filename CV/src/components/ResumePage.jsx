@@ -30,7 +30,7 @@ export default function ResumePage(){
                         <h3 className='job-title'>{jobTitle}</h3>
                     </div>
                     <div className="about-description">
-                        
+
                     </div>
                 </div>
 
