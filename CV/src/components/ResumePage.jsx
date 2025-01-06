@@ -37,11 +37,10 @@ export default function ResumePage(){
                         <p className='about-description-text'>{stripHtmlTags(shortBio)}</p>
                     </div>
                 </div>
-
             </div>
             
             <div className="resume-page-experience">
-
+                
             </div>
             <div className="resume-page-education-skills">
 

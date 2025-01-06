@@ -26,8 +26,6 @@
   padding-bottom: 6rem;
 }
 
-
-
 /* React Quill styling */
 
 /*
@@ -40,15 +38,16 @@
 .ql-container {
     box-sizing: border-box;
     font-family: 'poppins', sans-serif; 
-    font-size: 0.9rem;                  /* Set font size */
-    height: 20rem;                /* Minimum height for the text area */
-    background-color: #f9f9f9;        /* Background color for the text area */
-    color: #333;                      /* Text color */
-    border-radius: 8px;               /* Rounded corners */
+    font-size: 0.9rem;                  
+    height: 20rem;               
+    background-color: #f9f9f9;        
+    color: #333;                     
+    border-radius: 8px;               
     padding: 10px;
     position: relative;
     z-index: 1000;
   }
+
   .ql-container.ql-disabled .ql-tooltip {
     visibility: hidden;
   }

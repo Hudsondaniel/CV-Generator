@@ -35,7 +35,10 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+}
 
+.resume-page-about-word{
+    padding-top: 0.6rem;
 }
 
 .resume-page-address .resume-page-inner-details{
@@ -85,4 +88,9 @@
 .job-title{
     font-weight: 300;
     font-size: 1rem;
+}
+
+.about-description-text{
+    font-size: 0.9rem;
+    font-weight: 300;
 }
