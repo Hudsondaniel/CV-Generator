@@ -20,6 +20,10 @@ nav {
     font-weight: 500;
 }
 
+.nav-section{
+    z-index: 999;
+}
+
 .profile-pic-nav{
     display: flex;  
     justify-content: flex-end; 

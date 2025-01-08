@@ -16,6 +16,10 @@
     border: none;
 }
 
+.other-data{
+    margin-bottom: 2rem;
+}
+
 .Title-your-details{
     font-size: 1.6rem;
     font-weight: bold;
