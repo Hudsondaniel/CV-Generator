@@ -2,7 +2,7 @@ import '../styles/ResumePage.css'
 import useDetailsStore from '../stores/useDetailsStore'
 
 export default function ResumePage(){
-    const { image, jobTitle, firstName, lastName, email, phoneNumber, address, shortBio} = useDetailsStore();
+    const { image, jobTitle, firstName, lastName, email, phoneNumber, address, shortBio, experienceEntries} = useDetailsStore();
     const stripHtmlTags = (html) => {
         const div = document.createElement('div');
         div.innerHTML = html;
@@ -39,13 +39,27 @@ export default function ResumePage(){
                 </div>
             </div>
             
-            <div className="resume-page-experience">
-                <div className="resume-page-about-word">
-                    <h1 className='About'>WORK EXPERIENCE</h1>
-                </div>
-            </div>
-            <div className="resume-page-education-skills">
+            <div className="resume-page-experience-container">
+                    <div className="resume-page-about-word">
+                        <h1 className='About'>WORK EXPERIENCE</h1>
+                    </div>
+                    <div className="experience-resume-page">
+                        {experienceEntries.map((entry) => (
+                            <div key={entry.id} className="experience-entry">
+                                <h3 className='company-name'>{entry.designationValue}</h3>
+                                <div className="working-details">
+                                    <h4 className="position">{entry.addressValue}</h4> 
+                                    <span className='hypen'>-</span>
+                                    <p className="duration">
+                                        (<time dateTime={entry.startDate}>{entry.startDate}</time> - 
+                                        <time dateTime={entry.endDate}>{entry.endDate}</time>)
+                                    </p>
+                                </div>
 
+                                <p className='description'>{stripHtmlTags(entry.shortDescription)}</p>
+                            </div>
+                        ))}
+                    </div>
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 .resume-page{
     display: grid;
-    grid-template-rows: 15% 1fr 2fr 1fr;
+    grid-template-rows: 15% 0.8fr 2fr 1fr;
     height: 1123px;
     background-color: white;
     margin: 3rem;
@@ -93,4 +93,31 @@
 .about-description-text{
     font-size: 0.9rem;
     font-weight: 300;
+}
+
+.resume-page-experience-container{
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+}
+
+.company-name{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 7px;
+}
+
+.working-details{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.position, .duration, .hypen{
+    color: #e7734d;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.description{
+    font-size: 0.9rem;
 }
