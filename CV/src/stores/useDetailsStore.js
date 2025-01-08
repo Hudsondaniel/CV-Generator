@@ -1,6 +1,5 @@
 import { create } from 'zustand';
 
-
 const useDetailsStore = create((set) => ({
     image: '',
     jobTitle: '',
@@ -9,7 +8,8 @@ const useDetailsStore = create((set) => ({
     email: '',
     phoneNumber: '',
     address: '',
-    shortBio: '', // Corrected to match the variable name
+    shortBio: '',
+    experienceEntries: [],
 
     // Setters for each field
     setImage: (image) => set({ image }),
@@ -19,24 +19,33 @@ const useDetailsStore = create((set) => ({
     setEmail: (email) => set({ email }),
     setPhoneNumber: (phoneNumber) => set({ phoneNumber }),
     setAddress: (address) => set({ address }),
-    setShortBio: (value) => set({ shortBio: value }), // Fixed key here
+    setShortBio: (value) => set({ shortBio: value }),
 
-    // Optionally, you can add a function to save form data (just like you had `handleSaveNext`)
-    saveFormData: () => {
-        set((state) => {
-            const formData = {
-                jobTitle: state.jobTitle,
-                firstName: state.firstName,
-                lastName: state.lastName,
-                email: state.email,
-                phoneNumber: state.phoneNumber,
-                address: state.address,
-                image: state.image,
-            };
-            console.log("Form Data:", formData);
-            alert("Form saved successfully!");
-        });
-    },
+    // Setters for experience entries
+    addExperienceEntry: () =>
+        set((state) => ({
+            experienceEntries: [
+                ...state.experienceEntries,
+                {
+                    id: state.experienceEntries.length + 1,
+                    designationValue: '',
+                    addressValue: '',
+                    startDate: '',
+                    endDate: '',
+                    shortDescription: '',
+                },
+            ],
+        })),
+    updateExperienceEntry: (id, field, newValue) =>
+        set((state) => ({
+            experienceEntries: state.experienceEntries.map((entry) =>
+                entry.id === id ? { ...entry, [field]: newValue } : entry
+            ),
+        })),
+    deleteExperienceEntry: (id) =>
+        set((state) => ({
+            experienceEntries: state.experienceEntries.filter((entry) => entry.id !== id),
+        })),
 }));
 
 export default useDetailsStore;

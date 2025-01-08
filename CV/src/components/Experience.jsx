@@ -1,87 +1,87 @@
-import { useState } from 'react';
 import '../styles/Experience.css';
 import trashIcon from '../assets/Icons/trashIco.svg';
+import useDetailsStore from '../stores/useDetailsStore';
 
 export default function Experience() {
-    const [experienceEntries, setExperienceEntries] = useState([]);
-
-    const handleAddExperience = () => {
-        setExperienceEntries([...experienceEntries, 
-            {
-                id: experienceEntries.length + 1, 
-                designationValue: "", 
-                addressValue: "",  
-                experienceDuration: "", 
-                shortDescription: ""
-            }]);
-    };
-
-    const handleExperienceChange = (id, field, newValue) => {
-        setExperienceEntries(
-            experienceEntries.map(entry =>
-                entry.id === id ? {...entry, [field]: newValue} : entry
-            )
-        )
-    }
+    const {
+        experienceEntries,
+        addExperienceEntry,
+        updateExperienceEntry,
+        deleteExperienceEntry,
+    } = useDetailsStore();
 
     return (
         <div className="experience-container">
             <div className="experience-section">
-                <h2 className='experience-heading'>Experience</h2>
-                <p className='experience-text'>Review your experience history</p>
+                <h2 className="experience-heading">Experience</h2>
+                <p className="experience-text">Review your experience history</p>
                 <div className="experience-box">
                     {experienceEntries.map((entry) => (
                         <form key={entry.id} className="experience-entry">
                             <div className="experience-deleteIcon">
-                                <input 
-                                    type="text" 
-                                    value={entry.designationValue} 
-                                    onChange={(e) => handleExperienceChange(entry.id, 'designationValue', e.target.value)} 
-                                    placeholder="Enter Your Designation" 
-                                    className='designation-input'
+                                <input
+                                    type="text"
+                                    value={entry.designationValue}
+                                    onChange={(e) =>
+                                        updateExperienceEntry(entry.id, 'designationValue', e.target.value)
+                                    }
+                                    placeholder="Enter Your Designation"
+                                    className="designation-input"
                                 />
-                                <div className="delete-icon">
-                                    <img src={trashIcon} alt="" />
-                                </div>
+                                <button
+                                    type="button"
+                                    className="delete-icon"
+                                    onClick={() => deleteExperienceEntry(entry.id)}
+                                    aria-label="Delete Experience Entry"
+                                >
+                                    <img src={trashIcon} alt="Delete" />
+                                </button>
+
                             </div>
                             <div className="address-date">
-                                <input 
-                                    type="text" 
-                                    value={entry.addressValue} 
-                                    onChange={(e) => handleExperienceChange(entry.id, 'addressValue', e.target.value)} 
-                                    placeholder="Enter Company Address" 
-                                    className='address-input'
+                                <input
+                                    type="text"
+                                    value={entry.addressValue}
+                                    onChange={(e) =>
+                                        updateExperienceEntry(entry.id, 'addressValue', e.target.value)
+                                    }
+                                    placeholder="Enter Company Address"
+                                    className="address-input"
                                 />
                                 <div className="date">
                                     <input
                                         type="date"
                                         value={entry.startDate}
-                                        onChange={(e) => handleExperienceChange(entry.id, 'startDate', e.target.value)}
-                                        placeholder='Start Date'
-                                        className='start-date'
+                                        onChange={(e) =>
+                                            updateExperienceEntry(entry.id, 'startDate', e.target.value)
+                                        }
+                                        className="start-date"
                                     />
                                     <input
                                         type="date"
                                         value={entry.endDate}
-                                        onChange={(e) => handleExperienceChange(entry.id, 'endDate', e.target.value)}
-                                        className='end-date'
+                                        onChange={(e) =>
+                                            updateExperienceEntry(entry.id, 'endDate', e.target.value)
+                                        }
+                                        className="end-date"
                                     />
                                 </div>
                             </div>
                             <textarea
-                                value={entry.shortDescription} 
-                                onChange={(e) => handleExperienceChange(entry.id, 'shortDescription', e.target.value)} 
+                                value={entry.shortDescription}
+                                onChange={(e) =>
+                                    updateExperienceEntry(entry.id, 'shortDescription', e.target.value)
+                                }
                                 placeholder="Short Description of Your Role"
-                                className='short-description'
+                                className="short-description"
                             />
                         </form>
-                        
                     ))}
                 </div>
-                
+
                 <div className="add-experience">
-                    <button onClick={handleAddExperience} className="add-experience-button">
-                        + 
+                    <button onClick={addExperienceEntry} className="add-experience-button">
+                        +
                     </button>
                     <h3 className="add-exp-button">Add Experience</h3>
                 </div>
