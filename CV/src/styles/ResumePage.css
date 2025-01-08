@@ -121,3 +121,8 @@
 .description{
     font-size: 0.9rem;
 }
+
+.description pre{
+    font-family: inherit; /* Inherit the font from its parent */
+    white-space: pre-wrap; /* Preserve line breaks and wrap text */
+}

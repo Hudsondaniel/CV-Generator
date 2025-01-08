@@ -56,7 +56,7 @@ export default function ResumePage(){
                                     </p>
                                 </div>
 
-                                <p className='description'>{stripHtmlTags(entry.shortDescription)}</p>
+                                <p className='description'><pre>{stripHtmlTags(entry.shortDescription)}</pre></p>
                             </div>
                         ))}
                     </div>
