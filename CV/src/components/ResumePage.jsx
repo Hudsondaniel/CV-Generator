@@ -2,7 +2,7 @@ import '../styles/ResumePage.css'
 import useDetailsStore from '../stores/useDetailsStore'
 
 export default function ResumePage(){
-    const { image, jobTitle, firstName, lastName, email, phoneNumber, address, shortBio, experienceEntries} = useDetailsStore();
+    const { image, jobTitle, firstName, lastName, email, phoneNumber, address, shortBio, experienceEntries, educationEntries} = useDetailsStore();
     const stripHtmlTags = (html) => {
         const div = document.createElement('div');
         div.innerHTML = html;
@@ -60,6 +60,31 @@ export default function ResumePage(){
                             </div>
                         ))}
                     </div>
+            </div>
+            <div className="resume-page-education-skills-container">
+                <div className="resume-page-about-word">
+                    <h1 className='About'>EDUCATION</h1>
+                </div>
+                <div className="resume-page-education">
+                    <div className="education-resume-page">
+                        {educationEntries.map((entry) => (
+                            <div key={entry.id} className="education-entry">
+                                <h3 className='institution-name'>{entry.institutionValue}</h3>
+                                <div className="degree-details">
+                                    <h4 className="degree">{entry.degreeValue}</h4> 
+                                    <span className='hypen'>-</span>
+                                    <p className="duration">
+                                        (<time dateTime={entry.startDateValue}>{entry.startDateValue}</time> - 
+                                        <time dateTime={entry.endDateValue}>{entry.endDateValue}</time>)
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="resume-page-skills">
+                    
+                </div>
             </div>
         </div>
     )

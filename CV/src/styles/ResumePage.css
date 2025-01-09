@@ -125,7 +125,12 @@
 }
 
 .description pre{
-    font-family: inherit; /* Inherit the font from its parent */
-    white-space: pre-wrap; /* Preserve line breaks and wrap text */
+    font-family: inherit; 
+    white-space: pre-wrap; 
     margin-top: 10px;
+}
+
+.resume-page-education-skills-container{
+    display: grid;
+    grid-template-columns: 4rem 1fr 1fr;
 }
