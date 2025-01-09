@@ -72,10 +72,9 @@ export default function ResumePage(){
                                 <h3 className='institution-name'>{entry.institutionValue}</h3>
                                 <div className="degree-details">
                                     <h4 className="degree">{entry.degreeValue}</h4> 
-                                    <span className='hypen'>-</span>
                                     <p className="duration">
-                                        (<time dateTime={entry.startDateValue}>{entry.startDateValue}</time> - 
-                                        <time dateTime={entry.endDateValue}>{entry.endDateValue}</time>)
+                                        [<time dateTime={entry.startDateValue}>{entry.startDateValue}</time>] <span>-</span>  
+                                        [<time dateTime={entry.endDateValue}>{entry.endDateValue}</time>]
                                     </p>
                                 </div>
                             </div>
@@ -83,7 +82,9 @@ export default function ResumePage(){
                     </div>
                 </div>
                 <div className="resume-page-skills">
-                    
+                    <div className="resume-page-skills-title">
+                        <h1 className='About'>SKILLS</h1>
+                    </div>
                 </div>
             </div>
         </div>

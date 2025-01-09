@@ -100,7 +100,7 @@
     grid-template-columns: 4rem 1fr;
 }
 
-.company-name{
+.company-name, .institution-name{
     font-size: 1rem;
     font-weight: 600;
     margin-top: 7px;
@@ -113,10 +113,21 @@
     gap: 20px;
 }
 
-.position, .duration, .hypen, .degree{
+.position, .hypen, .degree{
     color: #e7734d;
     font-size: 0.9rem;
     margin: 0;
+}
+
+.duration{
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.degree{
+    margin-bottom: 7px;
 }
 
 .description{
@@ -134,3 +145,5 @@
     display: grid;
     grid-template-columns: 4rem 1fr 1fr;
 }
+
+
