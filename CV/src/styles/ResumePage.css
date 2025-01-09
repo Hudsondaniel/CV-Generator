@@ -113,7 +113,7 @@
     gap: 20px;
 }
 
-.position, .duration, .hypen{
+.position, .duration, .hypen, .degree{
     color: #e7734d;
     font-size: 0.9rem;
     margin: 0;

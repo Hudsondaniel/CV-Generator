@@ -25,7 +25,7 @@ export default function Education() {
                                     onChange={(e) =>
                                         updateEducationEntry(entry.id, 'institutionValue', e.target.value)
                                     }
-                                    placeholder="Institution Name"
+                                    placeholder="Degree "
                                     className="institution-input"
                                 />
                                 <button
@@ -42,7 +42,7 @@ export default function Education() {
                                     onChange={(e) =>
                                         updateEducationEntry(entry.id, 'degreeValue', e.target.value)
                                     }
-                                    placeholder="Degree"
+                                    placeholder="Institution Name"
                                     className="degree-input"
                                 />
                                 <div className="date-education">

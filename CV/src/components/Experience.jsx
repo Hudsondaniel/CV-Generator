@@ -2,6 +2,8 @@ import '../styles/Experience.css';
 import trashIcon from '../assets/Icons/trashIco.svg';
 import useDetailsStore from '../stores/useDetailsStore';
 
+// I have swapped the placeholder name for degree and institution name so the degreee gets a bolder name.
+
 export default function Experience() {
     const {
         experienceEntries,
