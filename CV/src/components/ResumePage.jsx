@@ -1,8 +1,6 @@
 import '../styles/ResumePage.css';
 import useDetailsStore from '../stores/useDetailsStore';
-import { jsPDF } from 'jspdf';
-import html2canvas from "html2canvas";
-import NavBar from './NavBar';
+
 
 export default function ResumePage() {
     const { image, jobTitle, firstName, lastName, email, phoneNumber, address, shortBio, experienceEntries, educationEntries, skills } = useDetailsStore();
@@ -12,36 +10,9 @@ export default function ResumePage() {
         return div.textContent || div.innerText || '';
     };
 
-    const exportToPDF = async () => {
-        const resumeElement = document.querySelector('.resume-page');
-        const canvas = await html2canvas(resumeElement, { scale: 2});
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF('p', 'mm', 'a4');
 
-        const imgWidth = 210; // PDF width in mm
-        const pageHeight = 297; // PDF height in mm
-        const imgHeight = (canvas.height * imgWidth) / canvas.width; // Calculate image height to maintain aspect ratio
-        let heightLeft = imgHeight;
-        let position = 0;
-
-        // Add multiple pages if the content overflows
-        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-        heightLeft -= pageHeight;
-
-        while (heightLeft > 0) {
-            position = heightLeft - imgHeight;
-            pdf.addPage();
-            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-            heightLeft -= pageHeight;
-        }
-
-        pdf.save(`${firstName}_${lastName}_Resume.pdf`);       
-    
-    }
 
     return (
-        <>
-            <NavBar onExport={exportToPDF}/>
             <div className="resume-page">
                 <div className="dp-address">
                     <div className="resume-page-dp">
@@ -129,7 +100,6 @@ export default function ResumePage() {
                     </div>
                 </div>
             </div>
-        </>
 
     );
 }
