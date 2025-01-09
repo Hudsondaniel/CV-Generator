@@ -10,7 +10,8 @@ const useDetailsStore = create((set) => ({
     address: '',
     shortBio: '',
     experienceEntries: [],
-    educationEntries: [], // Added education entries
+    educationEntries: [], 
+    skills: [],
 
     // Setters for each field
     setImage: (image) => set({ image }),
@@ -71,6 +72,16 @@ const useDetailsStore = create((set) => ({
     deleteEducationEntry: (id) =>
         set((state) => ({
             educationEntries: state.educationEntries.filter((entry) => entry.id !== id),
+        })),
+    
+        // Skills setters
+    addSkill: (text) =>
+        set((state) => ({
+            skills: [...state.skills, { id: state.skills.length + 1, text }],
+        })),
+    deleteSkill: (id) =>
+        set((state) => ({
+            skills: state.skills.filter((skill) => skill.id !== id),
         })),
 }));
 

@@ -1,26 +1,18 @@
 import '../styles/Skills.css';
-import { useState } from 'react';
+import useDetailsStore from '../stores/useDetailsStore';
 
 export default function Skills() {
-    const [skills, setSkills] = useState([]);
-    const [inputValue, setInputValue] = useState('');
-
-    // Handle skill input
-    const handleInputChange = (e) => {
-        setInputValue(e.target.value);
-    };
+    const skills = useDetailsStore((state) => state.skills);
+    const addSkill = useDetailsStore((state) => state.addSkill);
+    const deleteSkill = useDetailsStore((state) => state.deleteSkill);
 
     const handleInputKeyDown = (e) => {
-        if (e.key === 'Enter' && inputValue.trim()) {
+        const inputValue = e.target.value.trim();
+        if (e.key === 'Enter' && inputValue) {
             e.preventDefault();
-            const newSkill = { id: skills.length + 1, text: inputValue.trim() }; // Generate ID based on length
-            setSkills([...skills, newSkill]);
-            setInputValue(''); 
+            addSkill(inputValue); 
+            e.target.value = ''; 
         }
-    };
-
-    const removeSkill = (id) => {
-        setSkills(skills.filter(skill => skill.id !== id));
     };
 
     return (
@@ -31,8 +23,6 @@ export default function Skills() {
                 <div className="skills-input-container">
                     <input
                         type="text"
-                        value={inputValue}
-                        onChange={handleInputChange}
                         onKeyDown={handleInputKeyDown}
                         placeholder="Type a skill and press Enter"
                         className="skills-input"
@@ -41,11 +31,19 @@ export default function Skills() {
                 <div className="skills-tags-container">
                     {skills.map((skill) => (
                         <div key={skill.id} className="skill-tag">
-                            <div className="skill-text">{skill.text} <button className="remove-skill" onClick={() => removeSkill(skill.id)}>✕</button></div>                            
+                            <div className="skill-text">
+                                {skill.text}{' '}
+                                <button
+                                    className="remove-skill"
+                                    onClick={() => deleteSkill(skill.id)}
+                                >
+                                    ✕
+                                </button>
+                            </div>
                         </div>
                     ))}
                 </div>
-                </div>
+            </div>
             <div className="buttons-back-next-short-bio">
                 <button className="back-button">Back</button>
                 <button className="saveNext-button">Save & Next</button>
