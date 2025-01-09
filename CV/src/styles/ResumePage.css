@@ -22,6 +22,8 @@
 .resume-page-dp{
     display: flex;
     align-items: center;
+    background: none;
+    border: none;
 }
 
 .resume-page-dp img{

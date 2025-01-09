@@ -36,7 +36,7 @@ export default function YourDetails() {
                     {/* Image Display */}
                     <div className="resume-dp">
                         <div className="image-container">
-                                <img src={image} alt="Preview" className="image-resume" />
+                                <img src={image} alt="" className="image-resume" />
                         </div>
                     </div>
 

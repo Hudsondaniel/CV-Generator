@@ -13,12 +13,12 @@ export default function ResumePage(){
         <div className="resume-page">
             <div className="dp-address">
                 <div className="resume-page-dp">
-                    <img src={image} alt="" />
+                    {image && <img src={image} alt="" className="image-resume" />}
                 </div>
                 <div className="resume-page-address">
                     <div className='resume-page-inner-details'>
                         <p className='resume-inner-text'>{email}</p>
-                        <p className='resume-inner-text'>{phoneNumber}</p>
+                        {phoneNumber}
                         <p className='resume-inner-text'>{address}</p>
                     </div>
                 </div>
