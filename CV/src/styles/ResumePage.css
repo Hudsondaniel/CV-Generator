@@ -146,4 +146,15 @@
     grid-template-columns: 4rem 1fr 1fr;
 }
 
+.resume-page-skills{
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+}
 
+#skills-resume{
+    padding-bottom: 0.6rem;
+}
+
+.skills-list{
+    margin-top: 0.6rem;
+}

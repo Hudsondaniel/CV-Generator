@@ -1,8 +1,8 @@
 import '../styles/ResumePage.css'
-import useDetailsStore from '../stores/useDetailsStore'
+import useDetailsStore from '../stores/useDetailsStore';
 
 export default function ResumePage(){
-    const { image, jobTitle, firstName, lastName, email, phoneNumber, address, shortBio, experienceEntries, educationEntries} = useDetailsStore();
+    const { image, jobTitle, firstName, lastName, email, phoneNumber, address, shortBio, experienceEntries, educationEntries, skills} = useDetailsStore();
     const stripHtmlTags = (html) => {
         const div = document.createElement('div');
         div.innerHTML = html;
@@ -83,7 +83,14 @@ export default function ResumePage(){
                 </div>
                 <div className="resume-page-skills">
                     <div className="resume-page-skills-title">
-                        <h1 className='About'>SKILLS</h1>
+                        <h1 className='About' id='skills-resume'>SKILLS</h1>
+                    </div>
+                    <div className="resume-page-skills-section">
+                        <ul className="skills-list">
+                            {skills.map((skill) => (
+                                <li key={skill.id}>{skill.text}</li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>
