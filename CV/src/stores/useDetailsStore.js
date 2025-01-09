@@ -10,6 +10,7 @@ const useDetailsStore = create((set) => ({
     address: '',
     shortBio: '',
     experienceEntries: [],
+    educationEntries: [], // Added education entries
 
     // Setters for each field
     setImage: (image) => set({ image }),
@@ -21,7 +22,7 @@ const useDetailsStore = create((set) => ({
     setAddress: (address) => set({ address }),
     setShortBio: (value) => set({ shortBio: value }),
 
-    // Setters for experience entries
+    // Experience entry setters
     addExperienceEntry: () =>
         set((state) => ({
             experienceEntries: [
@@ -45,6 +46,31 @@ const useDetailsStore = create((set) => ({
     deleteExperienceEntry: (id) =>
         set((state) => ({
             experienceEntries: state.experienceEntries.filter((entry) => entry.id !== id),
+        })),
+
+    // Education entry setters
+    addEducationEntry: () =>
+        set((state) => ({
+            educationEntries: [
+                ...state.educationEntries,
+                {
+                    id: state.educationEntries.length + 1,
+                    institutionValue: '',
+                    degreeValue: '',
+                    startDateValue: '',
+                    endDateValue: '',
+                },
+            ],
+        })),
+    updateEducationEntry: (id, field, value) =>
+        set((state) => ({
+            educationEntries: state.educationEntries.map((entry) =>
+                entry.id === id ? { ...entry, [field]: value } : entry
+            ),
+        })),
+    deleteEducationEntry: (id) =>
+        set((state) => ({
+            educationEntries: state.educationEntries.filter((entry) => entry.id !== id),
         })),
 }));
 

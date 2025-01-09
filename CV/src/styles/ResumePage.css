@@ -1,6 +1,6 @@
 .resume-page{
     display: grid;
-    grid-template-rows: 15% 0.8fr 2fr 1fr;
+    grid-template-rows: 15% 0.8fr 1.8fr 1fr;
     height: 1123px;
     background-color: white;
     margin: 3rem;
@@ -104,6 +104,7 @@
     font-size: 1rem;
     font-weight: 600;
     margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 .working-details{
@@ -120,9 +121,11 @@
 
 .description{
     font-size: 0.9rem;
+    margin-top: 7px;
 }
 
 .description pre{
     font-family: inherit; /* Inherit the font from its parent */
     white-space: pre-wrap; /* Preserve line breaks and wrap text */
+    margin-top: 10px;
 }
