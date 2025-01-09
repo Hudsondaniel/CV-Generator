@@ -1,6 +1,6 @@
 .resume-page{
     display: grid;
-    grid-template-rows: 15% 0.8fr 1.8fr 1fr;
+    grid-template-rows: 15% 0.8fr 1.5fr 1fr;
     height: 1123px;
     background-color: white;
     margin: 3rem;

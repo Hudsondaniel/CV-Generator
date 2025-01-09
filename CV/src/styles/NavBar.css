@@ -40,6 +40,17 @@ nav {
     
 }
 
+.export-button{
+    font: inherit;
+    margin-right: 2rem;
+    font-size: 0.8rem;
+    border-radius: 7px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #fef9f3;
+    
+}
+
 /* Small devices (phones) */
 @media (max-width: 576px) {
     /* Styles for small devices like phones */
