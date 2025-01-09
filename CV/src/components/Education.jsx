@@ -1,5 +1,5 @@
 import '../styles/Education.css';
-import trashIcon from '../assets/Icons/trashIco.svg';
+import trashIcon from '../assets/Icons/trashIco.svg'
 import useDetailsStore from '../stores/useDetailsStore';
 
 export default function Education() {
