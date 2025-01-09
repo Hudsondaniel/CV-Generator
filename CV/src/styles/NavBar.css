@@ -40,20 +40,33 @@ nav {
     
 }
 
-.export-button{
+.export-button {
     font: inherit;
     margin-right: 2rem;
-    font-size: 0.8rem;
-    border-radius: 7px;
-    padding-right: 10px;
-    padding-left: 10px;
-    background-color: #fef9f3;
-    
+    font-size: 0.8rem; 
+    padding: 4px 24px; 
+    background-color: #f9a825; 
+    color: white; 
+    border: none; 
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    transition: all 0.3s ease; 
+    cursor: pointer; 
 }
 
-/* Small devices (phones) */
+.export-button:hover {
+    background-color: #f57f17; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.export-button:focus {
+    outline: none; 
+    border: 2px solid #f57f17; 
+}
+
+
 @media (max-width: 576px) {
-    /* Styles for small devices like phones */
 
     .navbar{
         display: flex;
@@ -75,7 +88,7 @@ nav {
     }
 }
 
-/* Medium devices (standard tablets and larger mobile devices) */
+
 @media (min-width: 577px) and (max-width: 1199px) {
     .navbar {
         display: flex;
