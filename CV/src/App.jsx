@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import ResumePage from './components/ResumePage';
+import DeviceWarning from './components/DeviceWarning';
 import './App.css'
 import { useState } from 'react';
 
@@ -47,6 +48,7 @@ function App() {
 
   return (
     <>
+      <DeviceWarning />
       <div className="nav-section">
         <NavBar/>
         <DetailSection setActiveSection={setActiveSection}/>
