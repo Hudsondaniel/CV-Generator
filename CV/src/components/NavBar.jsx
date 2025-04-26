@@ -2,8 +2,10 @@ import '../styles/NavBar.css';
 import profilePic from '../assets/Img/Nav-Profile-pic.jpg'; 
 import { jsPDF } from 'jspdf';
 import html2canvas from "html2canvas";
+import useDetailsStore from '../stores/useDetailsStore';
 
 export default function NavBar() {
+    const resetStore = useDetailsStore((state) => state.resetStore);
 
     const exportToPDF = async () => {
         const resumeElement = document.querySelector('.resume-page');
@@ -29,17 +31,23 @@ export default function NavBar() {
         }
 
         pdf.save(`Resume.pdf`);       
-    
-    }
+    };
 
     const handleExportClick = () => {
         exportToPDF();
-    }
+    };
+
+    const handleResetClick = () => {
+        if (window.confirm('Are you sure you want to reset all data? This cannot be undone.')) {
+            resetStore();
+        }
+    };
 
     return (
         <nav className="navbar">
-            <h1 className='nav-heading'>CV Builder</h1>
+            <h1 className='nav-heading'>Skillhsheet</h1>
             <div className='profile-pic-nav'>
+                <button className='reset-button' onClick={handleResetClick}>Reset Data</button>
                 <button className='export-button' onClick={handleExportClick}>Export PDF</button>
                 <img src={profilePic} alt="Profile" /> 
             </div>
