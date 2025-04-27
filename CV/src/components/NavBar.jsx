@@ -1,5 +1,5 @@
 import '../styles/NavBar.css';
-import profilePic from '../assets/Img/Nav-Profile-pic.jpg'; 
+// import profilePic from '../assets/Img/Nav-Profile-pic.jpg'; 
 import { jsPDF } from 'jspdf';
 import html2canvas from "html2canvas";
 import useDetailsStore from '../stores/useDetailsStore';
@@ -49,7 +49,7 @@ export default function NavBar() {
             <div className='profile-pic-nav'>
                 <button className='reset-button' onClick={handleResetClick}>Reset Data</button>
                 <button className='export-button' onClick={handleExportClick}>Export PDF</button>
-                <img src={profilePic} alt="Profile" /> 
+                <img src={'/assets/Img/Nav-Profile-pic.jpg'} alt="Profile" /> 
             </div>
         </nav>
     );

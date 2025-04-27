@@ -1,5 +1,5 @@
 import '../styles/Education.css';
-import trashIcon from '../assets/Icons/trashIco.svg'
+// import trashIcon from '../assets/Icons/trashIco.svg'
 import useDetailsStore from '../stores/useDetailsStore';
 import PropTypes from 'prop-types';
 
@@ -33,7 +33,7 @@ export default function Education({ onNext, onBack }) {
                                     className="delete-icon-education"
                                     onClick={() => deleteEducationEntry(entry.id)}
                                 >
-                                    <img src={trashIcon} alt="Delete" />
+                                    <img src={'/assets/Icons/trashIco.svg'} alt="Delete" />
                                 </button>
                             </div>
                             <div className="degree-date">

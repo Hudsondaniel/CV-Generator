@@ -1,5 +1,5 @@
 import '../styles/Experience.css';
-import trashIcon from '../assets/Icons/trashIco.svg';
+// import trashIcon from '../assets/Icons/trashIco.svg';
 import useDetailsStore from '../stores/useDetailsStore';
 import PropTypes from 'prop-types';
 
@@ -37,7 +37,7 @@ export default function Experience({ onNext, onBack }) {
                                     onClick={() => deleteExperienceEntry(entry.id)}
                                     aria-label="Delete Experience Entry"
                                 >
-                                    <img src={trashIcon} alt="Delete" />
+                                    <img src={'/assets/Icons/trashIco.svg'} alt="Delete" />
                                 </button>
 
                             </div>
