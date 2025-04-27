@@ -2,8 +2,9 @@ import '../styles/ShortBio.css';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; 
 import useDetailsStore from '../stores/useDetailsStore';
+import PropTypes from 'prop-types';
 
-export default function ShortBio() {
+export default function ShortBio({ onNext, onBack }) {
     const { shortBio, setShortBio } = useDetailsStore();
 
     const handleTextChange = (value) => {
@@ -27,9 +28,24 @@ export default function ShortBio() {
                 </div>
             </div>
             <div className="buttons-back-next-short-bio">
-                <button className="back-button">Back</button>
-                <button className="saveNext-button">Save & Next</button>
+                <button 
+                    className="back-button"
+                    onClick={onBack}
+                >
+                    Back
+                </button>
+                <button 
+                    className="saveNext-button"
+                    onClick={onNext}
+                >
+                    Save & Next
+                </button>
             </div>
         </div>
     );
 }
+
+ShortBio.propTypes = {
+    onNext: PropTypes.func.isRequired,
+    onBack: PropTypes.func.isRequired,
+};

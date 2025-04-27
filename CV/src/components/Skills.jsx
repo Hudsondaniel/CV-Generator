@@ -1,7 +1,8 @@
 import '../styles/Skills.css';
 import useDetailsStore from '../stores/useDetailsStore';
+import PropTypes from 'prop-types';
 
-export default function Skills() {
+export default function Skills({ onNext, onBack }) {
     const skills = useDetailsStore((state) => state.skills);
     const addSkill = useDetailsStore((state) => state.addSkill);
     const deleteSkill = useDetailsStore((state) => state.deleteSkill);
@@ -45,9 +46,24 @@ export default function Skills() {
                 </div>
             </div>
             <div className="buttons-back-next-short-bio">
-                <button className="back-button">Back</button>
-                <button className="saveNext-button">Save & Next</button>
+                <button 
+                    className="back-button"
+                    onClick={onBack}
+                >
+                    Back
+                </button>
+                <button 
+                    className="saveNext-button"
+                    onClick={onNext}
+                >
+                    Save & Next
+                </button>
             </div>
         </div>
     );
 }
+
+Skills.propTypes = {
+    onNext: PropTypes.func.isRequired,
+    onBack: PropTypes.func.isRequired,
+};

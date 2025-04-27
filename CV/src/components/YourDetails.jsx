@@ -1,7 +1,8 @@
 import useDetailsStore from '../stores/useDetailsStore';
 import '../styles/YourDetails.css';
+import PropTypes from 'prop-types';
 
-export default function YourDetails() {
+export default function YourDetails({ onNext, onBack }) {
     const { image, jobTitle, firstName, lastName, email, phoneNumber, address, 
         setImage, setJobTitle, setFirstName, setLastName, setEmail, setPhoneNumber, setAddress} = useDetailsStore();
 
@@ -123,10 +124,17 @@ export default function YourDetails() {
 
             {/* Buttons */}
             <div className="buttons-back-next">
-                <button className="back-button">Back</button>
+                <button 
+                    className="back-button"
+                    onClick={onBack}
+                    disabled={!onBack}
+                >
+                    Back
+                </button>
                 <button 
                     type="button" 
-                    className="saveNext-button" 
+                    className="saveNext-button"
+                    onClick={onNext}
                 >
                     Save & Next
                 </button>
@@ -134,3 +142,8 @@ export default function YourDetails() {
         </div>
     );
 }
+
+YourDetails.propTypes = {
+    onNext: PropTypes.func.isRequired,
+    onBack: PropTypes.func.isRequired,
+};

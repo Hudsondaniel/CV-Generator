@@ -1,8 +1,9 @@
 import '../styles/Education.css';
-import trashIcon from '../assets/Icons/trashIco.svg'
+// import trashIcon from '../assets/Icons/trashIco.svg'
 import useDetailsStore from '../stores/useDetailsStore';
+import PropTypes from 'prop-types';
 
-export default function Education() {
+export default function Education({ onNext, onBack }) {
     const {
         educationEntries,
         addEducationEntry,
@@ -32,7 +33,7 @@ export default function Education() {
                                     className="delete-icon-education"
                                     onClick={() => deleteEducationEntry(entry.id)}
                                 >
-                                    <img src={trashIcon} alt="Delete" />
+                                    <img src={'/assets/Icons/trashIco.svg'} alt="Delete" />
                                 </button>
                             </div>
                             <div className="degree-date">
@@ -77,9 +78,24 @@ export default function Education() {
                 </div>
             </div>
             <div className="buttons-back-next-short-bio">
-                <button className="back-button">Back</button>
-                <button className="saveNext-button">Save & Next</button>
+                <button 
+                    className="back-button"
+                    onClick={onBack}
+                >
+                    Back
+                </button>
+                <button 
+                    className="saveNext-button"
+                    onClick={onNext}
+                >
+                    Save & Next
+                </button>
             </div>
         </div>
     );
 }
+
+Education.propTypes = {
+    onNext: PropTypes.func.isRequired,
+    onBack: PropTypes.func.isRequired,
+};

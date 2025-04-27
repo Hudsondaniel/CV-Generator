@@ -1,10 +1,11 @@
 import '../styles/Experience.css';
-import trashIcon from '../assets/Icons/trashIco.svg';
+// import trashIcon from '../assets/Icons/trashIco.svg';
 import useDetailsStore from '../stores/useDetailsStore';
+import PropTypes from 'prop-types';
 
 // I have swapped the placeholder name for degree and institution name so the degreee gets a bolder name.
 
-export default function Experience() {
+export default function Experience({ onNext, onBack }) {
     const {
         experienceEntries,
         addExperienceEntry,
@@ -36,7 +37,7 @@ export default function Experience() {
                                     onClick={() => deleteExperienceEntry(entry.id)}
                                     aria-label="Delete Experience Entry"
                                 >
-                                    <img src={trashIcon} alt="Delete" />
+                                    <img src={'/assets/Icons/trashIco.svg'} alt="Delete" />
                                 </button>
 
                             </div>
@@ -89,9 +90,24 @@ export default function Experience() {
                 </div>
             </div>
             <div className="buttons-back-next-short-bio">
-                <button className="back-button">Back</button>
-                <button className="saveNext-button">Save & Next</button>
+                <button 
+                    className="back-button"
+                    onClick={onBack}
+                >
+                    Back
+                </button>
+                <button 
+                    className="saveNext-button"
+                    onClick={onNext}
+                >
+                    Save & Next
+                </button>
             </div>
         </div>
     );
 }
+
+Experience.propTypes = {
+    onNext: PropTypes.func.isRequired,
+    onBack: PropTypes.func.isRequired,
+};
