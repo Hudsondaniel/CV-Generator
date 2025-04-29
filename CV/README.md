@@ -59,10 +59,6 @@ npm run build
 - React-Quill (Rich Text Editor)
 - html2canvas & jsPDF (PDF Export)
 
-## License
-
-MIT License
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
